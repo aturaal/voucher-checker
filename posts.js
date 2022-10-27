@@ -1,12 +1,15 @@
-const express = require('express')
-const v_post = require('../voucher.schema')
-const router = express.Router;
+const express = require('express');
+const post = require('../voucher.schema')
+const router = express.Router();
 
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
 
-res.send('hi')
+    res.send('We are on posts!')
 
 });
 
+
+
 module.exports = router;
+
