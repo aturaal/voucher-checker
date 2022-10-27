@@ -13,6 +13,13 @@ db.on('error' , (error) => console.error("Database connection error" + error))
 
 db.once('open' , () => console.log("Successfully connected to database"))
 
+
+const Postrouter =  require('./routers/posts')
+
+app.use('/posts' , Postrouter);
+
+
+
 app.get('/api/v1/voucherchecker' , (req, res) => {
 
 
@@ -20,3 +27,6 @@ app.get('/api/v1/voucherchecker' , (req, res) => {
 })
 
 app.listen(3000, () => console.log("Server is running"))
+
+
+
