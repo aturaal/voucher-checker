@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 router.post('/' , function (req, res) {
 
         const post = new Post({
-            voucher_Code: mongoose.Types.ObjectId(req.voucher_Code),
-                        redeemed_By: mongoose.Types.ObjectId(req.redeemed_By),
+            voucher_Code: req.body.voucher_Code,
+                                redeemed_By: req.body.redeemed_By,
 
         })
 
