@@ -18,7 +18,7 @@ db.on('error' , (error) => console.error("Database connection error" + error))
 db.once('open' , () => console.log("Successfully connected to database"))
 
 
-const Postrouter =  require('./routers/posts');
+const Postrouter =  require('./posts');
 const voucherSchema = require('./voucher.schema');
 
 app.use('/posts' , Postrouter);
